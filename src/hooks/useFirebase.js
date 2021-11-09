@@ -119,7 +119,7 @@ useEffect(()=>{
   fetch(`https://morning-mountain-42778.herokuapp.com/users/${user.email}`)
   .then(res=> res.json())
   .then(data => setAdmin(data.admin))
-},[])
+},[user.email])
 
   const logOut = () => {
     setLoading(true)
