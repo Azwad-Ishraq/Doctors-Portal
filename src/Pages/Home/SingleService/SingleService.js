@@ -7,7 +7,7 @@ import { CardMedia, Grid } from '@mui/material';
 const SingleService = (props) => {
     const {name,description,img} = props.service
     return (
-        <Grid item xs={4} sm={4} md={4}>
+        <Grid item xs={12} sm={12} md={4}>
              <Card sx={{ minWidth: 275,border: 0,boxShadow: 0 }}>
 
              
@@ -29,7 +29,7 @@ const SingleService = (props) => {
         {name}
         </Typography>
         
-        <Typography color='text.secondary' variant="body2">
+        <Typography style={{textAlign:'left'}} color='text.secondary' variant="body2">
          {description}
          
          

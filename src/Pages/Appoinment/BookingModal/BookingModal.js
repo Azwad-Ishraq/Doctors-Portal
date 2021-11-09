@@ -43,7 +43,7 @@ const BookingModal = ({open,handleClose,booking,date,setOpenSnackBar}) => {
 
       console.log(appoinment)
 
-      fetch(`http://localhost:5000/appoinments`,{
+      fetch(`https://morning-mountain-42778.herokuapp.com/appoinments`,{
         method:'POST',
         headers: {
           'content-type': 'application/json'

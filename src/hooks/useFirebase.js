@@ -112,11 +112,14 @@ const unsubscribe =   onAuthStateChanged(auth, (user) => {
   return () => unsubscribe
 },[auth])
 
+
+
 useEffect(()=>{
-  fetch(`http://localhost:5000/users/${user.email}`)
+  console.log(user.email)
+  fetch(`https://morning-mountain-42778.herokuapp.com/users/${user.email}`)
   .then(res=> res.json())
   .then(data => setAdmin(data.admin))
-},[user.email])
+},[])
 
   const logOut = () => {
     setLoading(true)
@@ -133,7 +136,7 @@ useEffect(()=>{
 
   const saveUser = (email,displayName,method) => {
     const user ={email,displayName};
-    fetch(`http://localhost:5000/users`,{
+    fetch(`https://morning-mountain-42778.herokuapp.com/users`,{
       method: method,
       headers:{
         'content-type':'application/json'

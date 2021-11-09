@@ -50,41 +50,7 @@ const Navigation = () => {
         
         
           
-          <NavLink activeStyle={activeLinkStyle} style={linkStyle}  to='/home'>
-          <Button color="inherit">Home</Button>
-          </NavLink>
-          <NavLink activeStyle={activeLinkStyle} style={linkStyle}  to='/appoinment'>
-          <Button color="inherit">Appoinment</Button>
-          </NavLink>
-
-            {
-              user?.email ? 
-              
-          <Button onClick={logOut} color="inherit">Logout</Button>
           
-          :
-          <NavLink activeStyle={activeLinkStyle} style={linkStyle}  to='/login'>
-          <Button color="inherit">Login</Button>
-          </NavLink>
-            }
-
-
-         {
-           user.email? <span></span>
-           :
-           <NavLink activeStyle={activeLinkStyle} style={linkStyle}  to='/register'>
-           <Button color="inherit">Register</Button>
-           </NavLink>
-         }
-         {
-           user.email?
-            <NavLink activeStyle={activeLinkStyle} style={linkStyle}  to='/dashboard'>
-           <Button color="inherit">Dashboard</Button>
-           </NavLink>
-           :
-           <span></span>
-           
-         }
          
 
 

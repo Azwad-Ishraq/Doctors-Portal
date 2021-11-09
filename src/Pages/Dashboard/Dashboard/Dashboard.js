@@ -41,10 +41,10 @@ const linkStyle = {
     textDecoration:'none'
 }
 function Dashboard(props) {
-    const {logOut,admin} = useAuth();
+    const {logOut,admin,user} = useAuth();
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    
+    console.log(admin,user)
     let { path, url } = useRouteMatch();
 
     
@@ -143,7 +143,7 @@ function Dashboard(props) {
             >
                 <Toolbar>
                     <IconButton
-                        color="inherit"
+                        color='default'
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}

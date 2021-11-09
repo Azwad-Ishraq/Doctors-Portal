@@ -22,7 +22,7 @@ const AppointmentBanner = () => {
           <Grid item xs={12} md={6}>
           <img style={{width:'65%',marginTop:'-150px'}} src={doctorImg} alt=""/>
           </Grid>
-          <Grid item xs={12} md={6} sx={{display: 'flex',justifyContent:'flex-start',textAlign:'left',alignItems:'center'}}>
+          <Grid item xs={12} md={6} sx={{display: 'flex',justifyContent:'flex-start',textAlign:'left',alignItems:'center',mb:5}}>
            <Container>
            <Typography variant='h6' sx={{mb:5}} style={{color: '#12d0d9'}}>
                 Appointment
