@@ -11,11 +11,11 @@ const Exeptional = () => {
 
 
         <Grid item xs={12} sm={12} md={6}>
-          <img style={{width:'70%',height:'100%'}} src={treatmentImg} alt=""/>
+          <img data-aos='flip-left' style={{width:'70%',height:'100%'}} src={treatmentImg} alt=""/>
         </Grid>
 
 
-        <Grid  item xs={12} sm={12} md={6}>
+        <Grid data-aos='flip-right' item xs={12} sm={12} md={6}>
        <Box sx={{p:5}} style={{textAlign:'left',display:'flex',justifyContent:'center',flexDirection:'column',height:'100%',margin:'0 auto'}}>
        <Typography sx={{mb:5}} variant='h3'>
             Exeptional Dental 

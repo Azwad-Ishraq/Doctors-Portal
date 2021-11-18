@@ -15,7 +15,9 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import Navigation from "./Pages/Navigation/Navigation";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
-
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const theme = createTheme({
   palette:{
@@ -29,6 +31,9 @@ const theme = createTheme({
 
 
 function App() {
+  useEffect(()=>{
+    Aos.init({duration:1000})
+},[])
   return (
     <div className="App">
     <ThemeProvider theme={theme}>

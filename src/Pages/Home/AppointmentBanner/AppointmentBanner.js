@@ -19,10 +19,10 @@ const AppointmentBanner = () => {
     return (
         <Box style={appoinmentBanner} sx={{ flexGrow: 1 }}>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
-          <img style={{width:'65%',marginTop:'-150px'}} src={doctorImg} alt=""/>
+          <Grid data-aos='fade-up-right' item xs={12} md={6}>
+          <img  style={{width:'65%',marginTop:'-150px'}} src={doctorImg} alt=""/>
           </Grid>
-          <Grid item xs={12} md={6} sx={{display: 'flex',justifyContent:'flex-start',textAlign:'left',alignItems:'center',mb:5}}>
+          <Grid data-aos='fade-up-left' item xs={12} md={6} sx={{display: 'flex',justifyContent:'flex-start',textAlign:'left',alignItems:'center',mb:5}}>
            <Container>
            <Typography variant='h6' sx={{mb:5}} style={{color: '#12d0d9'}}>
                 Appointment

@@ -1,0 +1,13 @@
+.footer-icon{
+    margin-right: 20px;
+    color:#1cc7c1;
+    padding:10px;
+    border: 1px solid #1cc7c1;
+    border-radius: 50%;
+    transition: .3s;
+    cursor: pointer;
+    
+}.footer-icon:hover{
+    color:white;
+    background-color: #1cc7c1;
+}

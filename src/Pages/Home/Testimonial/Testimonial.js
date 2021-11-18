@@ -49,7 +49,7 @@ const Testimonial = () => {
 
 
 <Card sx={{ minWidth: 275 }}>
-      <CardContent sx={{p:2}}>
+      <CardContent data-aos='zoom-in-up' sx={{p:2}}>
         <Typography sx={{ fontSize: 14 ,mb:5}} color="text.secondary" gutterBottom>
           {item.des}
         </Typography>

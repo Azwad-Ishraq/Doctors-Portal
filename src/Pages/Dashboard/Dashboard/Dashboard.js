@@ -30,6 +30,8 @@ import useAuth from '../../../hooks/useAuth';
 import DashboardHome from '../DashboardHome/DashboardHome';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import AddDoctor from '../AddDoctor/AddDoctor';
+import Payment from '../Payment/Payment';
+
 
 const drawerWidth = 240;
 const listItemIconStyle= {
@@ -202,6 +204,9 @@ function Dashboard(props) {
                 <Switch>
         <Route exact path={path}>
           <DashboardHome></DashboardHome>
+        </Route>
+        <Route  path={`${path}/payment/:appoinmentId`}>
+          <Payment></Payment>
         </Route>
         <AdminRoute path={`${path}/makeAdmin`}>
           <MakeAdmin></MakeAdmin>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -8,6 +8,7 @@ import flourideImg from '../../../images/fluoride.png'
 import cavityImg from '../../../images/cavity.png'
 import whiteningImg from '../../../images/whitening.png'
 import Typography from '@mui/material/Typography';
+
 
 
 const Services = () => {
@@ -28,18 +29,19 @@ const Services = () => {
             img: whiteningImg
         }
     ]
+    
     return (
 
-
+        
         <Box sx={{ flexGrow: 1 ,mt:5}}>
             <Container>
-                <Typography sx={{fontWeight: 800,color:'#12d0d9',m:2}} variant="h6" component="div">
+                <Typography  sx={{fontWeight: 800,color:'#12d0d9',m:2}} variant="h6" component="div">
                     Our Services
                 </Typography>
                 <Typography sx={{fontWeight: 400,m:2}} variant="h4" component="div">
                     Services We Provide
                 </Typography>
-                <Grid style={{marginTop:'50px'}} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Grid data-aos='fade-right' style={{marginTop:'50px'}} container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {services.map((service, index) => (
 
                         <SingleService key={service.name} service={service}></SingleService>

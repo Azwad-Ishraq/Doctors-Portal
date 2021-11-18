@@ -2,6 +2,7 @@ import { useState } from "react"
 import initializeAuthentication from "../Firebase/Firebase.init"
 import { getAuth, createUserWithEmailAndPassword,signOut,onAuthStateChanged,signInWithEmailAndPassword ,GoogleAuthProvider  ,signInWithPopup , updateProfile,getIdToken } from "firebase/auth";
 import { useEffect } from "react";
+import errorGeneretor from "./errorGeneretor";
 initializeAuthentication()
 
 const useFirebase = () => {
@@ -58,6 +59,7 @@ const useFirebase = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user)
+    
     setAuthError('')
     const destination = location.state?.from || '/home';
     history.replace(destination)
@@ -66,7 +68,8 @@ const useFirebase = () => {
   })
   .catch((error) => {
     
-    setAuthError(error.message)
+    setAuthError(errorGeneretor(error.message))
+    
   })
   .finally(()=>setLoading(false));
 

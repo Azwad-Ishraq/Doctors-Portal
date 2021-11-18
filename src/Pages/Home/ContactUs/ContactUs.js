@@ -7,7 +7,8 @@ const contactUsBanner = {
     background: `url(${bg})`,
     marginTop: '100px',
     backgroundColor: 'rgba(45,58,74,.8)',
-    backgroundBlendMode: 'darken,luminosity'
+    backgroundBlendMode: 'darken,luminosity',
+    paddingBottom:'100px'
 
 }
 const ContactUs = () => {
@@ -23,19 +24,19 @@ const ContactUs = () => {
 
            <Grid sx={{mt:5,mb:5}} container spacing={2}>
 
-        <Grid item xs={12} md={12}>
+        <Grid data-aos='zoom-in-up' item xs={12} md={12}>
 
         <TextField style={{backgroundColor:'white',width:'50%'}} id="filled-basic" label="Email Address" variant="filled" />
 
         </Grid>
 
-        <Grid item xs={12} md={12}>
+        <Grid data-aos='zoom-in-down' item xs={12} md={12}>
 
         <TextField style={{backgroundColor:'white',width:'50%'}} id="filled-basic" label="Subject" variant="filled" />
 
         </Grid>
 
-        <Grid item xs={12} md={12}>
+        <Grid data-aos='zoom-in-up' item xs={12} md={12}>
 
 
         <TextField
@@ -50,7 +51,7 @@ const ContactUs = () => {
         </Grid>
 
         
-      </Grid>
+      </Grid >
 
       <Button variant='contained's style={{background: 'linear-gradient(to right, #18d2af 0%,#18d2af 52%,#0fcfe7 100%)',boxShadow:'0px 0px',borderRadius:'0'}} >Submit </Button>
 
