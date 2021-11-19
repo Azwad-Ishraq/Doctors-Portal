@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const Appoinments = ({date}) => {
     const {user,token} = useAuth()
     const [appoinments,setAppoinments] = useState([])
-    console.log(date)
+    console.log(appoinments)
 
     useEffect(()=>{
         fetch(`https://morning-mountain-42778.herokuapp.com/appoinments?email=${user.email}&date=${date.toLocaleDateString()}`,{
